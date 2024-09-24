@@ -13,3 +13,15 @@ repositories {
 dependencies {
     implementation(compose.desktop.currentOs)
 }
+
+compose.desktop {
+    application {
+        mainClass = "Main"
+    }
+}
+
+sourceSets {
+    main {
+        kotlin.srcDirs("src/main")
+    }
+}
