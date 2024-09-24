@@ -11,21 +11,21 @@ import screens.splashScreen.initSplashScreen
 // This is the entry point of this application
 @Composable
 fun initApp(
-    showSplashString: Boolean = true,
+    showSplashString: SplashScreenStatus = SplashScreenStatus.SHOW,
     modifier: Modifier = Modifier
 ) {
 
     var splashScreenStatus by remember { mutableStateOf(SplashScreenStatus.SHOW) }
 
     when(splashScreenStatus) {
-        SHOW -> {
+        SplashScreenStatus.SHOW -> {
             initSplashScreen(
                 onSplashFinished = {
                     splashScreenStatus = HIDE
                 }
             )
         }
-        HIDE -> {
+        SplashScreenStatus.HIDE -> {
             loadApplicationWindow()
         }
     }
