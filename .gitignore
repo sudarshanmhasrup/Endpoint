@@ -6,3 +6,7 @@
 
 # Build
 build
+desktopApp/build
+
+# Kotlin
+.kotlin
