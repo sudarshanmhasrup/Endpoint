@@ -20,6 +20,7 @@ fun initApp(
     when(splashScreenStatus) {
         SplashScreenStatus.SHOW -> {
             initSplashScreen(
+                modifier = modifier,
                 onSplashFinished = {
                     splashScreenStatus = HIDE
                 }

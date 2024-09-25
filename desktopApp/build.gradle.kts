@@ -1,3 +1,5 @@
+import org.jetbrains.compose.ComposePlugin.CommonComponentsDependencies.resources
+
 plugins {
     alias(libs.plugins.kotlin)
     alias(libs.plugins.compose)
@@ -23,5 +25,6 @@ compose.desktop {
 sourceSets {
     main {
         kotlin.srcDirs("src/main")
+        resources.srcDirs("src/resources")
     }
 }
